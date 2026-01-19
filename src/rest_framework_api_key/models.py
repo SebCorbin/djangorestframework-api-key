@@ -76,25 +76,25 @@ class AbstractAPIKey(models.Model):
 
     id = models.CharField(
         verbose_name=_("ID"),
-        max_length=150, 
-        unique=True, 
-        primary_key=True, 
+        max_length=150,
+        unique=True,
+        primary_key=True,
         editable=False,
     )
     prefix = models.CharField(
         verbose_name=_("Prefix"),
-        max_length=8, 
-        unique=True, 
-        editable=False
+        max_length=8,
+        unique=True,
+        editable=False,
     )
     hashed_key = models.CharField(
         verbose_name=_("Hashed key"),
-        max_length=150, 
+        max_length=150,
         editable=False,
     )
     created = models.DateTimeField(
         verbose_name=_("Created at"),
-        auto_now_add=True, 
+        auto_now_add=True,
         db_index=True,
     )
     name = models.CharField(
